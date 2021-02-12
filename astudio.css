@@ -64,24 +64,24 @@ header {
     margin-right: 0.3rem;
 }
 
-.dot.maths {
+.maths {
     background-color: #5959ff;
-}
-
-.dot.chemistry {
-    background-color: #a65b21;
-}
-
-.dot.cs {
-    background-color: #c23a25;
-}
-
-.dot.choose {
-    background-color: #d8d8d8;
-}
-
-.titleDot.maths {
     color: #5959ff;
+}
+
+.chemistry {
+    background-color: #a65b21;
+    color: #a65b21;
+}
+
+.cs {
+    background-color: #c23a25;
+    color: #c23a25;
+}
+
+.choose {
+    background-color: #d8d8d8;
+    color: #c23a25;
 }
 
 .mainTitle.maths:hover {
