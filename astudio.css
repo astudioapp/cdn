@@ -64,23 +64,35 @@ header {
     margin-right: 0.3rem;
 }
 
-.maths {
+.dot.maths {
     background-color: #5959ff;
+}
+
+.dot.chemistry {
+    background-color: #a65b21;
+}
+
+.dot.cs {
+    background-color: #c23a25;
+}
+
+.dot.choose {
+    background-color: #d8d8d8;
+}
+
+.titleDot.maths {
     color: #5959ff;
 }
 
-.chemistry {
-    background-color: #a65b21;
+.titleDot.chemistry {
     color: #a65b21;
 }
 
-.cs {
-    background-color: #c23a25;
+.titleDot.cs {
     color: #c23a25;
 }
 
-.choose {
-    background-color: #d8d8d8;
+.titleDot.choose {
     color: #c23a25;
 }
 
