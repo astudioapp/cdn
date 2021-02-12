@@ -28,6 +28,6 @@ function toggleSubject() {
 
 function go(name) {
     let currentHostname = urlToDomain(window.location.href);
-    let newHostname = "https://" + name + "." + currentHostname;
+    let newHostname = "https://" + currentHostname + "/" + name;
     window.location.href = newHostname;
 }
