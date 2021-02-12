@@ -33,6 +33,14 @@ header {
     font-weight: bold;
     margin-right: 1.5rem;
     font-size: 1.3rem;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.headerTitle:hover {
+    color: rgba(0, 0, 0, 0.7);
+    transition: 0.2s;
 }
 
 .subjects {
