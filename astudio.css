@@ -215,6 +215,21 @@ main {
     transition: ease-in-out 0.3s;
 }
 
+.infoIconLinkDark:hover {
+    background-color: rgb(245, 245, 245);
+    transition: ease-in-out 0.3s;
+}
+
+.infoIconLink.dark:hover {
+    background-color: #2b2b2b;
+    transition: ease-in-out 0.3s;
+}
+
+.infoIconLinkDark.dark:hover {
+    background-color: #2b2b2b;
+    transition: ease-in-out 0.3s;
+}
+
 .nav-up {
     top: -4.5rem;
 }
