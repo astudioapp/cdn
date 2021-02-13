@@ -190,6 +190,22 @@ main {
     color: black;
 }
 
+.infoIconLinkDark {
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 3rem;
+    line-height: 4.5rem;
+    vertical-align: middle;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
 .infoIconLink:hover {
     background-color: rgb(245, 245, 245);
     transition: ease-in-out 0.3s;
