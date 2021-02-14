@@ -346,3 +346,256 @@ main {
 .darkToggle {
     margin-right: 1rem;
 }
+
+.left {
+    border-radius: 1rem;
+    width: 47%;
+    float: left;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
+    overflow-y: scroll;
+}
+
+.right {
+    border-radius: 1rem;
+    width: 47%;
+    float: right;
+    height: 81vh;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+textarea {
+    width: 99%;
+    resize: none;
+    border: none;
+    outline: none;
+    height: 65vh;
+}
+
+.button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
+    display: inline-block;
+}
+
+.importBackground {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.import {
+    position: fixed;
+    width: 35vw;
+    height: 30vh;
+    left: 32.5vw;
+    top: 35vh;
+    border-radius: 2rem;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 19px 19px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 19px 19px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 19px 19px -10px rgba(0,0,0,0.75);
+}
+
+.uploadTitle {
+    font-weight: bold;
+    color: black;
+    display: block;
+    text-align: center;
+}
+
+input#file {
+    display: inline-block;
+    width: 100%;
+    padding-top: 120px;
+    height: 100px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url('https://www.materialui.co/materialIcons/file/cloud_upload_black_192x192.png') center center no-repeat #ffffff;
+    background-size: 60px 60px;
+}
+
+input#file:focus {
+    outline: none;
+}
+
+.uploadButton {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.importCancel {
+    color: black;
+    text-align: center;
+    display: block;
+}
+
+.textInput {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    width: 90%;
+    outline: none;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.author {
+    margin-right: 1rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.image {
+    width: 30rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    background-color: #f5f5f5;
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.articleImage {
+    width: 30rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: white;
+}
+
+.articleImageNoSubtitle {
+    width: 30rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.articleImageSubtitleOuter {
+    padding: 0.8rem 1rem;
+}
+
+.text {
+    display: block;
+    margin-top: 1rem;
+}
+
+.bold {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.italic {
+    display: block;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.underline {
+    display: block;
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+.ytNoSubtitle {
+    width: 30rem;
+    height: 16.875rem;
+    margin-top: 1.5rem;
+    -webkit-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ytOuter {
+    width: 30rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    background-color: #f5f5f5;
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.yt {
+    width: 30rem;
+    height: 16.875rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.code {
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    font-family: 'Consolas', monospace;
+}

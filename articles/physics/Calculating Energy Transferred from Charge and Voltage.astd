@@ -1,0 +1,12 @@
+about::Calculating Energy Transferred from Charge and Voltage::14 Feb 2020::Sebastian Doe::/cdn/articles/physics/Calculating Energy Transferred from Charge and Voltage.astd::physics
+bold::You can use the equation Energy Transferred = Charge x Voltage
+text::You can also rearrange the equation by using the triangle below, so that Charge = Energy Transferred / Voltage and Voltage = Energy Transferred / Charge.
+img::https://i.imgur.com/sgElcCH.png::The EQV triangle
+bold::Units
+text::Energy Transferred: Joules (J)
+text::Charge: Coulombs (C)
+text::Voltage: Volts (V)
+linebreak::
+bold::Example question
+underline::Calculate how much energy will be transferred when there's 53 volts of voltage and 32 coulombs of charge?
+italic::E = Q x V = 32 x 53 = 1696J

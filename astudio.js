@@ -1,9 +1,3 @@
-function urlToDomain(url) {
-    var a = document.createElement('a');
-    a.href = url;
-    return a.hostname;
-}
-
 function toggleInfo() {
     if ($(".infoBox").css("display") == "none") {
         $(".infoBox").fadeIn(200);
@@ -26,92 +20,120 @@ function toggleSubject() {
     }
 }
 
-function go(name) {
-    let currentHostname = urlToDomain(window.location.href);
-    let newHostname = "https://" + currentHostname + "/" + name;
-    window.location.href = newHostname;
-}
-
 function pageLoad() {
     updateTheme();
 }
 
-function toggleDarkMode() {
-    if (localStorage.theme == "dark") {
-        localStorage.theme = "light";
-        updateTheme();
+function urlToDomain(url) {
+    var a = document.createElement('a');
+    a.href = url;
+    return a.hostname;
+}
+
+function go(name) {
+    if (name.includes("https://")) {
+        window.location.href = name;
+    } else if (name.includes("http://")) {
+        window.location.href = name;
     } else {
-        localStorage.theme = "dark";
-        updateTheme();
+        let currentHostname = urlToDomain(window.location.href);
+        let newHostname = "https://" + currentHostname + "/" + name;
+        window.location.href = newHostname;
     }
 }
 
-function updateTheme() {
-    if (localStorage.theme == "dark") {
-        // Dark
-        $('head').append(`
-            <link rel="apple-touch-icon" sizes="180x180" href="https://astudioapp.github.io/cdn/icons/dark/apple-touch-icon.png">
-            <link rel="icon" type="image/png" sizes="32x32" href="https://astudioapp.github.io/cdn/icons/dark/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="16x16" href="https://astudioapp.github.io/cdn/icons/dark/favicon-16x16.png">
-            <link rel="manifest" href="https://astudioapp.github.io/cdn/icons/dark/site.webmanifest">
-            <link rel="mask-icon" href="https://astudioapp.github.io/cdn/icons/dark/safari-pinned-tab.svg" color="#000000">
-            <link rel="shortcut icon" href="https://astudioapp.github.io/cdn/icons/dark/favicon.ico">
-            <meta name="msapplication-TileColor" content="#000000">
-            <meta name="msapplication-TileImage" content="https://astudioapp.github.io/cdn/icons/dark/mstile-144x144.png">
-            <meta name="msapplication-config" content="https://astudioapp.github.io/cdn/icons/dark/browserconfig.xml">
-            <meta name="theme-color" content="#000000">
-        `);
-        $('.darkToggle').removeClass('la-moon').addClass('la-sun');
-        $('header').css('background-color', '#1f1f1f');
-        $('html').css('background-color', '#1f1f1f');
-        $('body').css('background-color', '#1f1f1f');
-        $('.subjectBox').css('background-color', '#2b2b2b');
-        $('.infoBox').css('background-color', '#2b2b2b');
-        $('body').css('background-color', '#1f1f1f');
-        $('.headerTitle').css('color', '#ffffff');
-        $('.subjectItemLink').css('background-color', '#3d3d3d');
-        $('.infoIconLink.selected').css('background-color', '2b2b2b');
-        $('.subjectListSubject').css('background-color', '#2b2b2b');
-        $('.infoIconLink').addClass('dark');
-        $('.infoIconLinkDark').addClass('dark');
-        $('span').css('color', '#ffffff');
-        $('i').css('color', '#ffffff');
-        $('a').css('color', '#ffffff');
-        $('h1').css('color', '#ffffff');
-        $('h2').css('color', '#ffffff');
-        $('strong').css('color', '#ffffff');
-    } else {
-        // Light
-        $('head').append(`
-            <link rel="apple-touch-icon" sizes="180x180" href="https://astudioapp.github.io/cdn/icons/light/apple-touch-icon.png">
-            <link rel="icon" type="image/png" sizes="32x32" href="https://astudioapp.github.io/cdn/icons/light/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="192x192" href="https://astudioapp.github.io/cdn/icons/light/android-chrome-192x192.png">
-            <link rel="icon" type="image/png" sizes="16x16" href="https://astudioapp.github.io/cdn/icons/light/favicon-16x16.png">
-            <link rel="manifest" href="https://astudioapp.github.io/cdn/icons/light/site.webmanifest">
-            <link rel="mask-icon" href="https://astudioapp.github.io/cdn/icons/light/safari-pinned-tab.svg" color="#4a86e8">
-            <link rel="shortcut icon" href="https://astudioapp.github.io/cdn/icons/light/favicon.ico">
-            <meta name="msapplication-TileColor" content="#ffffff">
-            <meta name="msapplication-TileImage" content="https://astudioapp.github.io/cdn/icons/light/mstile-144x144.png">
-            <meta name="msapplication-config" content="https://astudioapp.github.io/cdn/icons/light/browserconfig.xml">
-            <meta name="theme-color" content="#ffffff">
-        `);
-        $('.darkToggle').removeClass('la-sun').addClass('la-moon');
-        $('header').css('background-color', '#ffffff');
-        $('html').css('background-color', '#ffffff');
-        $('body').css('background-color', '#ffffff');
-        $('.headerTitle').css('color', '#000000');
-        $('span').css('color', '#000000');
-        $('i').css('color', '#000000');
-        $('a').css('color', '#000000');
-        $('h1').css('color', '#000000');
-        $('h2').css('color', '#000000');
-        $('strong').css('color', '#000000');
-        $('.infoIconLink').removeClass('dark');
-        $('.infoIconLinkDark').removeClass('dark');
-        $('.subjectListSubject').css('background-color', '#fcfcfc');
-        $('.subjectBox').css('background-color', '#f5f5f5');
-        $('.infoBox').css('background-color', '#f5f5f5');
-        $('.subjectItemLink').css('background-color', '#eeeeee');
-        $('.infoIconLink.selected').css('background-color', 'f5f5f5');
-    }
+function parseArticle(article) {
+    articleLines = article.split("\n");
+    $(".article").html('');
+    articleLines.forEach(function(item, index) {
+        lineParts = item.split("::");
+        if (lineParts[0] == "about") {
+            $(".article").append(`
+            <div class="articleInfo">
+                <span class="title">` + lineParts[1] + `</span>
+                <span class="author"><i class="las la-tag" id="articleAboutIcon"></i> ` + lineParts[3] + `</span>
+                <span class="date"><i class="las la-calendar" id="articleAboutIcon"></i> ` + lineParts[2] + `</span>
+            </div>
+            `);
+        } else if (lineParts[0] == "img") {
+            if (lineParts.length == 3) {
+                $(".article").append(`
+                <div class="image">
+                    <img src="` + lineParts[1] + `" class="articleImage" alt="` + lineParts[2] + `"/>
+                    <div class="articleImageSubtitleOuter">
+                        <span class="articleImageSubtitle">` + lineParts[2] + `</span>
+                    </div>
+                </div>
+                `);
+            } else {
+                $(".article").append(`
+                <img src="` + lineParts[1] + `" class="articleImageNoSubtitle" alt="Article Image"/>
+                `);
+            }
+        } else if (lineParts[0] == "text") {
+            if (lineParts.length == 3) {
+                $(".article").append(`
+                <span class="text" style="color: ` + lineParts[2] + `">` + lineParts[1] + `</span>
+                `)
+            } else {
+                $(".article").append(`
+                <span class="text">` + lineParts[1] + `</span>
+                `);
+            }
+        } else if (lineParts[0] == "bold") {
+            console.log(lineParts.length);
+            if (lineParts.length == 3) {
+                $(".article").append(`
+                <span class="bold" style="color: ` + lineParts[2] + `">` + lineParts[1] + `</span>
+                `)
+            } else {
+                $(".article").append(`
+                <span class="bold">` + lineParts[1] + `</span>
+                `);
+            }
+        } else if (lineParts[0] == "italic") {
+            if (lineParts.length == 3) {
+                $(".article").append(`
+                <span class="italic" style="color: ` + lineParts[2] + `">` + lineParts[1] + `</span>
+                `)
+            } else {
+                $(".article").append(`
+                <span class="italic">` + lineParts[1] + `</span>
+                `);
+            }
+        } else if (lineParts[0] == "underline") {
+            if (lineParts.length == 3) {
+                $(".article").append(`
+                <span class="underline" style="color: ` + lineParts[2] + `">` + lineParts[1] + `</span>
+                `)
+            } else {
+                $(".article").append(`
+                <span class="underline">` + lineParts[1] + `</span>
+                `);
+            }
+        } else if (lineParts[0] == "yt") {
+            if (lineParts.length == 2) {
+                $(".article").append(`
+                <iframe src="https://www.youtube.com/embed/` + lineParts[1] + `" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ytNoSubtitle"></iframe>
+                `)
+            } else {
+                $(".article").append(`
+                <div class="ytOuter">
+                <iframe src="https://www.youtube.com/embed/` + lineParts[1] + `" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="yt"></iframe>
+                    <div class="articleImageSubtitleOuter">
+                        <span class="articleImageSubtitle">` + lineParts[2] + `</span>
+                    </div>
+                </div>
+                `);
+            }
+        } else if (lineParts[0] == "code") {
+            $(".article").append(`
+            <span class="code">` + lineParts[1] + `</span>
+            `);
+        } else if (lineParts[0] == "linebreak") {
+            $(".article").append(`
+            <br>
+            `);
+        }
+    });
 }
