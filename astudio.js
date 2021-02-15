@@ -133,6 +133,10 @@ function parseArticle(article) {
             $(".article").append(`
             <br>
             `);
+        } else if (lineParts[0] == "link") {
+            $(".article").append(`
+            <a href="` + lineParts[1] + `" target="_blank">` + lineParts[2] + `</a>
+            `);
         }
     });
 }
