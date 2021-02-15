@@ -13,6 +13,7 @@ body {
     border: 0;
     background-color: white;
     padding-bottom: 2rem;
+    overflow-x: hidden;
 }
 
 header {
