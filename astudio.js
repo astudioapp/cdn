@@ -81,7 +81,6 @@ function parseArticle(article) {
                 `);
             }
         } else if (lineParts[0] == "bold") {
-            console.log(lineParts.length);
             if (lineParts.length == 3) {
                 $(".article").append(`
                 <span class="bold" style="color: ` + lineParts[2] + `">` + lineParts[1] + `</span>
@@ -141,4 +140,20 @@ function parseArticle(article) {
 function articleLoad() {
     let article = $('ac').text();
     parseArticle(article);
+}
+
+function updateResults() {
+    let results = $(".articleSearch").val();
+    $('.articleButton').each(function(i, object) {
+        text = $(this).text();
+        text = text.toLowerCase();
+        results = results.toLowerCase();
+        if (text.includes(results)) {
+            $(this).show();
+        } else if (results == "") {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    });
 }
