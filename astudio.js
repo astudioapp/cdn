@@ -137,3 +137,8 @@ function parseArticle(article) {
         }
     });
 }
+
+function articleLoad() {
+    let article = $('ac').text();
+    parseArticle(article);
+}
