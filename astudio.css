@@ -505,6 +505,7 @@ input#file:focus {
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
     display: inline-block;
+    max-width: calc(100% - 1rem);
 }
 
 .articleImage {
@@ -512,6 +513,7 @@ input#file:focus {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     background-color: white;
+    width: 100%;
 }
 
 .articleImageNoSubtitle {
@@ -525,6 +527,7 @@ input#file:focus {
     box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
+    max-width: calc(100% - 1rem);
 }
 
 .articleImageSubtitleOuter {
@@ -563,6 +566,7 @@ input#file:focus {
     box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
     border-radius: 1rem;
     margin-bottom: 0.5rem;
+    max-width: calc(100% - 1rem);
 }
 
 .ytOuter {
@@ -578,6 +582,7 @@ input#file:focus {
     margin-top: 1.5rem;
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
+    max-width: calc(100% - 1rem);
 }
 
 .yt {
@@ -585,6 +590,7 @@ input#file:focus {
     height: 16.875rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    max-width: 100%;
 }
 
 .code {
