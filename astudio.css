@@ -145,7 +145,7 @@ main {
 .articleList {
     background-color: rgb(245, 245, 245);
     border-radius: 1rem;
-    padding: 0rem 0.7rem 1.5rem 0.7rem;
+    padding: 0rem 0.7rem 1rem 0.7rem;
     margin-top: 2rem;
     -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
     -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.28);
