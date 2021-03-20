@@ -538,6 +538,15 @@ input#file:focus {
 .text {
     display: block;
     margin-top: 1rem;
+    line-height: 1rem;
+    vertical-align: middle;
+}
+
+.material-icons.bulletPoint {
+    line-height: 1rem;
+    vertical-align: middle;
+    font-size: 0.7rem;
+    margin-right: 0.3rem;
 }
 
 .bold {
