@@ -542,7 +542,7 @@ input#file:focus {
     vertical-align: middle;
 }
 
-.material-icons.bulletPoint {
+.bulletPoint {
     line-height: 1rem;
     vertical-align: middle;
     font-size: 0.7rem;
