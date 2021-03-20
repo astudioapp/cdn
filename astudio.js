@@ -139,7 +139,7 @@ function parseArticle(article) {
             `);
         } else if (lineParts[0] == "link") {
             $(".article").append(`
-            <a href="` + lineParts[1] + `" target="_blank">` + lineParts[2] + `</a>
+            <a href="` + lineParts[1] + `" target="_blank" class="inlineLink">` + lineParts[2] + `</a>
             `);
         } else if (lineParts[0] == "html") {
             $(".article").append(`

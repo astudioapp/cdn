@@ -664,7 +664,7 @@ input#file:focus {
     transition: 0.2s ease-in-out;
 }
 
-a {
+a.inlineLink {
     display: inline-block;
     line-height: 1.5rem;
     margin-top: 1rem;
