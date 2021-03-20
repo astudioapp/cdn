@@ -618,6 +618,7 @@ input#file:focus {
 
 .articleButton {
     background-color: #ffffff;
+    border: 2px solid lightgray;
     padding: 1rem;
     margin-top: 1rem;
     display: inline-block;
@@ -630,9 +631,9 @@ input#file:focus {
 
 .articleButton:hover {
     transition: 0.2s ease-in-out;
-    -webkit-box-shadow: 0px 0px 23px -5px rgb(0 0 0 / 75%);
-    -moz-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 23px -5px rgb(0 0 0 / 75%);
+    -webkit-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.75);
 }
 
 .articleSearch {
