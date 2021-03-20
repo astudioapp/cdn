@@ -669,3 +669,20 @@ a {
     line-height: 1.5rem;
     margin-top: 1rem;
 }
+
+.html {
+    display: block;
+    margin-top: 1rem;
+}
+
+.textInner {
+    line-height: 1rem;
+    vertical-align: middle;
+}
+
+.textContainer {
+    display: block;
+    margin-top: 1rem;
+    line-height: 1rem !important;
+    vertical-align: middle;
+}

@@ -141,6 +141,14 @@ function parseArticle(article) {
             $(".article").append(`
             <a href="` + lineParts[1] + `" target="_blank">` + lineParts[2] + `</a>
             `);
+        } else if (lineParts[0] == "html") {
+            $(".article").append(`
+            <span class="html">` + lineParts[1] + `</span>
+            `);
+        } else if (lineParts[0] == "icon") {
+            $(".article").append(`
+            <span class="textContainer"><span class="material-icons bulletPoint" style="line-height: 1rem; vertical-align: middle; font-size: 0.9rem;">` + lineParts[1] + `</span><span class="textInner"> ` + lineParts[2] + `</span></span>
+            `);
         }
     });
 }
