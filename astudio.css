@@ -337,6 +337,7 @@ main {
 }
 
 .subjectListSubject {
+    display: block;
     border: 1px solid lightgray;
     background-color: #fcfcfc;
     margin-right: 1rem;
@@ -345,6 +346,7 @@ main {
     text-decoration: none;
     color: black;
     border-radius: 0.5rem;
+    width: calc(50vw - 5rem);
 }
 
 .subjectListSubject:hover {
