@@ -73,6 +73,22 @@ header {
     background-color: #f8f409;
 }
 
+.dot.latin {
+    background-color: #ff0000;
+}
+
+.dot.spanish {
+    background-color: #870420;
+}
+
+.dot.english {
+    background-color: #181c9e;
+}
+
+.dot.biology {
+    background-color: #613813;
+}
+
 .dot.chemistry {
     background-color: #a65b21;
 }
@@ -93,12 +109,29 @@ header {
     color: #f8f409;
 }
 
+.titleDot.biology {
+    color: #613813;
+}
+
+.titleDot.latin {
+    color: #ff0000;
+}
+
 .titleDot.chemistry {
     color: #a65b21;
 }
 
 .titleDot.cs {
     color: #c23a25;
+}
+
+
+.titleDot.spanish {
+    color: #870420;
+}
+
+.titleDot.english {
+    color: #181c9e;
 }
 
 .titleDot.choose {
