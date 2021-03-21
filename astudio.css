@@ -334,7 +334,7 @@ main {
 }
 
 .subjectListSubject {
-    display: block;
+    display: inline-block;
     border: 1px solid lightgray;
     background-color: #fcfcfc;
     margin-right: 1rem;
