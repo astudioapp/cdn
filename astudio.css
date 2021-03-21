@@ -673,6 +673,8 @@ a.inlineLink {
 .html {
     display: block;
     margin-top: 0.7rem;
+    border-radius: 1rem;
+    border: none;
 }
 
 .textInner {
