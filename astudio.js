@@ -20,10 +20,6 @@ function toggleSubject() {
     }
 }
 
-function pageLoad() {
-    updateTheme();
-}
-
 function urlToDomain(url) {
     var a = document.createElement('a');
     a.href = url;
