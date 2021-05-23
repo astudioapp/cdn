@@ -37,11 +37,11 @@ header {
     color: black;
     text-decoration: none;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .headerTitle:hover {
     color: rgba(0, 0, 0, 0.7);
-    transition: 0.2s;
 }
 
 .subjects {
@@ -55,6 +55,7 @@ header {
     height: 2rem;
     color: black;
     text-decoration: none;
+    transition: 0.2s ease-in-out;
 }
 
 .dot {
@@ -148,7 +149,6 @@ header {
     -moz-box-shadow: inset 5px 5px 26px 0px rgba(0,0,0,0.05);
     box-shadow: inset 5px 5px 26px 0px rgba(0,0,0,0.05);
     cursor: pointer;
-    transition: 0.2s;
 }
 
 .subjects.selected {
@@ -234,6 +234,7 @@ main {
     cursor: pointer;
     text-decoration: none;
     color: black;
+    transition: ease-in-out 0.3s;
 }
 
 .infoIconLinkDark {
@@ -250,26 +251,23 @@ main {
     cursor: pointer;
     text-decoration: none;
     color: black;
+    transition: ease-in-out 0.3s;
 }
 
 .infoIconLink:hover {
     background-color: rgb(245, 245, 245);
-    transition: ease-in-out 0.3s;
 }
 
 .infoIconLinkDark:hover {
     background-color: rgb(245, 245, 245);
-    transition: ease-in-out 0.3s;
 }
 
 .infoIconLink.dark:hover {
     background-color: #2b2b2b;
-    transition: ease-in-out 0.3s;
 }
 
 .infoIconLinkDark.dark:hover {
     background-color: #2b2b2b;
-    transition: ease-in-out 0.3s;
 }
 
 .nav-up {
@@ -317,11 +315,11 @@ main {
     float: right;
     color: black;
     text-decoration: none;
+    transition: ease-in-out 0.3s;
 }
 
 .subjectExitHolder:hover {
     background-color: rgb(232, 232, 232);
-    transition: ease-in-out 0.3s;
 }
 
 #subjectExitButton {
@@ -346,11 +344,11 @@ main {
     color: black;
     border-radius: 0.5rem;
     margin-top: 0.5rem;
+    transition: 0.2s ease-in-out;
 }
 
 .subjectItemLink:hover {
     background-color: rgb(232, 232, 232);
-    transition: 0.2s ease-in-out;
 }
 
 .subjectItemLink.selected {
@@ -377,11 +375,11 @@ main {
     color: black;
     border-radius: 0.5rem;
     width: calc(50vw - 5rem);
+    transition: 0.2s ease-in-out;
 }
 
 .subjectListSubject:hover {
     background-color: #f0f0f0;
-    transition: 0.2s ease-in-out;
 }
 
 .darkToggle {
@@ -650,8 +648,8 @@ input#file:focus {
 
 .articleButton {
     background-color: #ffffff;
-    -webkit-box-shadow: 0px 3px 8px 2px rgba(0,0,0,0.42); 
-    box-shadow: 0px 3px 8px 2px rgba(0,0,0,0.42);
+    -webkit-box-shadow: 0px 0px 2px 0px rgb(0 0 0 / 75%); 
+    box-shadow: 0px 0px 2px 0px rgb(0 0 0 / 75%);
     padding: 1rem;
     margin-top: 1rem;
     display: inline-block;
@@ -660,13 +658,14 @@ input#file:focus {
     margin-left: 0.7rem;
     color: black;
     text-decoration: none;
+    transition: 0.2s ease-in-out;
 }
 
 .articleButton:hover {
     border: none;
-    transition: 0.2s ease-in-out;
-    -webkit-box-shadow: 0px 3px 8px 2px rgba(0,0,0,0.60); 
-    box-shadow: 0px 3px 8px 2px rgba(0,0,0,0.60);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 .articleSearch {
@@ -685,16 +684,15 @@ input#file:focus {
     border: none;
     outline: none;
     margin-bottom: 1rem;
+    transition: 0.2s ease-in-out;
 }
 
 .articleSearch:hover {
     background-color: #ebebeb;
-    transition: 0.2s ease-in-out;
 }
 
 .articleSearch:focus {
     background-color: #ebebeb;
-    transition: 0.2s ease-in-out;
 }
 
 a.inlineLink {
